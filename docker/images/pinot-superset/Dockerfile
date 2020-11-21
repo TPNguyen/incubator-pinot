@@ -26,6 +26,8 @@ USER root
 # Install pinotdb driver to connect to Pinot
 COPY requirements-db.txt requirements-db.txt
 
+RUN pip install --no-cache python-crontab
+
 RUN pip install --no-cache -r requirements-db.txt
 
 COPY examples /etc/examples/pinot
